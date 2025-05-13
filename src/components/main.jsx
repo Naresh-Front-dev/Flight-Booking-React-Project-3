@@ -19,7 +19,7 @@ const Main = () => {
         airline: "",
         min_price: ""
     })
-    const BASE_URL = "https://backend-1u0t.onrender.com/api/flights";
+    const BASE_URL = "https://backend-keiu.onrender.com/";
 
     const [flightData, setFlightData] = useState([]);
     const [singelData, setSingelData] = useState()
