@@ -19,6 +19,7 @@ const Main = () => {
         airline: "",
         min_price: ""
     })
+    const BASE_URL = "https://backend-1u0t.onrender.com/api/flights";
 
     const [flightData, setFlightData] = useState([]);
     const [singelData, setSingelData] = useState()
@@ -26,7 +27,7 @@ const Main = () => {
     const [loadingimg, setLoadingimg] = useState(animationLooking)
     const getApiData = async () => {
         setLoadingimg(animationLooking)
-        const response = await axios.get(`http://localhost:3000/api/flights?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
+        const response = await axios.get(`${BASE_URL}?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
         try {
             if (response.data.length > 0) {
                 setFlightData(response.data)
