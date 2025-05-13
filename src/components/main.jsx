@@ -18,7 +18,7 @@ const Main = () => {
         airline: '',
         min_price: ''
     });
-    const BASE_URL = process.env.REACT_APP_API_URL || 'https://backend-keiu.onrender.com';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://backend-keiu.onrender.com';
     const [flightData, setFlightData] = useState([]);
     const [singleData, setSingleData] = useState(null);
     const [loading, setLoading] = useState(false);
