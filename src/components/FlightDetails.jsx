@@ -2,9 +2,9 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-
-
-const FlightDetails = ({flight}) => {
+import flightimg from "../assets/Animation - 1747077785800 (1).json"
+import Lottie from 'lottie-react';
+const FlightDetails = ({ flight }) => {
     return (
         <div>
             <Card className='mx-2'>
@@ -15,7 +15,7 @@ const FlightDetails = ({flight}) => {
                     </div>
                     <div className='d-flex align-items-center justify-content-between'>
                         <div className='d-flex align-items-center'>
-                 
+                            <Lottie animationData={flightimg} style={{ width: "100px", height: "100px" }} />
                             <div>
                                 <h6 className='mb-0'>{flight.airline}</h6>
                                 <p className='mb-0 text-success'>{flight.flight_id} . {flight.flight_duration} . {flight.cabin_class}</p>
