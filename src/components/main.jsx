@@ -28,7 +28,9 @@ const BASE_URL = import.meta.env.VITE_API_URL || 'https://backend-keiu.onrender.
         setLoading(true);
         setLoadingImg(animationLooking);
         try {
-            const response = await axios.get(`${BASE_URL}/api/flights?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
+          
+            const response = await axios.get(`${BASE_URL}?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
+           console.log("API BASE URL:", BASE_URL); // Check browser console
             if (response.data.length > 0) {
                 setFlightData(response.data);
                 setSingleData(response.data[0]);
