@@ -28,9 +28,7 @@ const BASE_URL = 'https://backend-keiu.onrender.com';
         setLoading(true);
         setLoadingImg(animationLooking);
         try {
-          
-            const response = await axios.get(`${BASE_URL}?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
-           console.log("API BASE URL:", BASE_URL); // Check browser console
+            const response = await axios.get(`${BASE_URL}/api/flights?from=${userData.from}&to=${userData.to}&date=${userData.date}&cabin_class=${userData.cabin_class}&min_price=${userData.min_price}&airline=${userData.airline}`);
             if (response.data.length > 0) {
                 setFlightData(response.data);
                 setSingleData(response.data[0]);
