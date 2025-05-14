@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import flightimg from "../assets/Animation - 1747077785800 (1).json"
+import Lottie from 'lottie-react';
 
 const FlightDetails = ({flight}) => {
     return (
